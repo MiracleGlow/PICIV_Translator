@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>txt Translator (For PIXIV)</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 50px;
+        }
+        .kotaknasi {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="kotaknasi">
+        <h1 class="text-center">Anything To Indonesian</h1>
+        <h3 class="text-center">Upload a Text File for Translation</h3>
+        <form action="/translate" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="fileUpload">Choose a text file:</label>
+                <input type="file" class="form-control-file" id="fileUpload" name="file" accept=".txt" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Terjemahkan</button>
+        </form>
+    </div>
+</body>
+</html>
